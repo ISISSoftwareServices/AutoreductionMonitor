@@ -12,6 +12,9 @@ Use the steps detailed below to access/modify the image, container or database:
 ### Build Docker Image with MySQL_image_schema.sql File Located in Current Directory
 * `docker build -t system_monitoring_schema .`
 
+### Build MySQL data volume called mysqldata
+* `docker create -v /var/lib/mysql --name mysqldata mysql`
+
 ### Run The Container with Attached Data Volume and Image Containing Schema from DockerFile
 * `docker run -p 15333:1433 --volumes-from mysqldata --name system_monitoring_db -d jack/mysql_system_monitoring`
 
