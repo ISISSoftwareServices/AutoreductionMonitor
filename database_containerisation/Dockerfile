@@ -1,4 +1,4 @@
-FROM mysql:5.7
+FROM mysql:8
 
 ENV MYSQL_ROOT_PASSWORD admin
 ENV MYSQL_DATABASE system_monitoring

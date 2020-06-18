@@ -14,10 +14,10 @@ Use the steps detailed below to access/modify the image, container or database:
 * `docker create -v /var/lib/mysql --name mysqldata mysql`
 
 ### Run The Container with Attached Data Volume and Image Containing Schema from DockerFile
-* `docker run -p 15333:1433 --volumes-from mysqldata --name system_monitoring_db -d jack/mysql_system_monitoring`
+* `docker run -p 15333:1433 --volumes-from mysqldata --name system_monitoring_db -d system_monitoring_schema`
 
 ### Execute Interactive Terminal Inside Container
-* `docker exec -it testcontainer3 /bin/bash`
+* `docker exec -it system_monitoring_db /bin/bash`
 
 ### Sign in to MySQL Using Credentials
 * `mysql -uadmin -padmin`
@@ -35,6 +35,4 @@ Use the steps detailed below to access/modify the image, container or database:
 * Create container again
 * Check data last added still persists in system_monitoring database inside system_monitoring_db 
 container.
-
-
  
