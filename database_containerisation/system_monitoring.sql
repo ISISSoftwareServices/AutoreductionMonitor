@@ -38,7 +38,7 @@ DROP TABLE IF EXISTS `instrument`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `instrument` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `instrument_name` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
