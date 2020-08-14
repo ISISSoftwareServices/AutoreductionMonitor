@@ -4,7 +4,9 @@ python:
 
 # command to install dependencies
 install:
+
   - pip install -r requirements.txt
 
 script:
   - py.test --cov=system_monitoring
+
