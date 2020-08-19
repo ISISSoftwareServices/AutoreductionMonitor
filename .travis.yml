@@ -5,9 +5,12 @@ python:
 # command to install dependencies
 install:
   # Install autoreduction
-  - git reset --soft HEAD^
+  - pip3 install -e .
   # Install autoreduction
-  - pip install -r requirements.txt
+  - pip3 install -r requirements.txt
+
 script:
+  # ================ Functional tests =============== #
+  - echo "Running Unit tests"
   - py.test --cov=system_monitoring
 
