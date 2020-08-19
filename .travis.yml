@@ -5,9 +5,9 @@ python:
 # command to install dependencies
 install:
   # Install autoreduction
-  - pip3 install -e .
+  - pip install -e .
   # Install autoreduction
-  - pip3 install -r requirements.txt
+  - pip install -r requirements.txt
 
 script:
   # ================ Functional tests =============== #
