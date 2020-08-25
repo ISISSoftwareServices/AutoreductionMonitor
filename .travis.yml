@@ -12,7 +12,8 @@ install:
 script:
   # ================ Functional tests =============== #
   - echo "Running Unit tests"
-  - py.test
+  - py.test --cov=system_monitoring
 
 after_success:
   - coveralls
+
