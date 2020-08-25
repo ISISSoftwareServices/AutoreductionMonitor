@@ -5,12 +5,15 @@ python:
 # command to install dependencies
 install:
   # Install autoreduction
-  - pip install -e .
-  # Install autoreduction
-  - pip install -r requirements.txt
+  - pip3 install -e .
+  # Install test suite dependencies
+  - pip3 install -r requirements.txt
 
 script:
   # ================ Functional tests =============== #
   - echo "Running Unit tests"
   - py.test --cov=system_monitoring
+
+after_success:
+  - coveralls
 
